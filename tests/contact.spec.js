@@ -75,7 +75,7 @@ describe('Form Submission', () => {
 });
 
 describe('Update Contact', () => {
-  test.only('Edit contact details', async ({ page, request }) => {
+  test('Edit contact details', async ({ page, request }) => {
     const ContactPageClass = new ContactPage(page);
     accessToken = await authenticateUser(testData.validUser.username, testData.validUser.password, { request });
     const id = await createEntity(testData.contactDetails, accessToken, '/contacts', { request });
